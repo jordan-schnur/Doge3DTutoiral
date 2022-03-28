@@ -1,5 +1,7 @@
 extends KinematicBody
 
+signal hit
+
 # m/s
 export var speed = 14
 
@@ -50,5 +52,10 @@ func _physics_process(delta):
 				
 				mob.squash()
 				velocity.y = bounce_impulse
-	
-	
+				
+func die():
+	emit_signal("hit")
+	queue_free()
+
+func _on_MobDetector_body_entered(body):
+	die()
