@@ -25,3 +25,7 @@ func initialize(start_positon, player_position):
 
 func _on_VisibilityNotifier_screen_exited():
 	queue_free()
+	
+func squash():
+	emit_signal("squashed")
+	queue_free()
