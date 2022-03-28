@@ -1,6 +1,6 @@
 extends KinematicBody
 
-
+signal squashed
 # m/s
 export var min_speed = 10
 
