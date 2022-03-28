@@ -13,7 +13,7 @@ func _physics_process(delta):
 	move_and_slide(velocity)
 	
 # Set mob to start position and add or subject a random angle from the player angle
-func initalize(start_positon, player_position):
+func initialize(start_positon, player_position):
 	translation = start_positon
 	look_at(player_position, Vector3.UP)
 	rotate_y(rand_range(-PI / 4, PI / 4))
